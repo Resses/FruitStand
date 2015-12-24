@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="jqm-icon-pack-fa.css">
+        <link rel ="stylesheet" href="css/quiz.css">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src ="quiz.js"></script>
+        <style>
+            #goodluck {
+                -webkit-animation-duration: 3s;
+                -webkit-animation-name: slidein;
+            }
+
+            @-webkit-keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300%; 
+                }
+
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+                }
+            }
+            /*            video will only display when screen is >600px.*/
+            @media (min-width: 600px) {
+                video{ 
+                    width:100%;
+                    max-width: 800px;
+                }
+            }
+            @media (max-width: 600px) {
+                video{ 
+                    width:0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--INSTRUCTIONS-->
+        <div data-role="page" id="instructions">
+            <div data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#instructions" data-icon="info" class="ui-btn-active ui-state-persist">Instructions</a></li>
+                        <li><a href="#agriculture" data-icon ="shopping-cart">Agriculture</a></li>
+                        <li><a href="#business" data-icon ="suitcase">Strategy</a></li>
+                        <li><a href="#quiz"  data-icon ="files-o">Quiz Me!</a></li>
+                        <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+                    </ul>
+                </div>
+            </div>  
+            <div data-role="main" class="ui-content"  style="margin:10px; line-height: 30px;">
+                <h2 id="blue">You are the owner of a fruits and vegetables stand in NYC!</h2>
+                <ul>
+                    <li id="green">Browse through the learning section.</li>
+                    <li id="orange">Take the quiz to see how well you know your stuff.</li>
+                    <li id="purple">Based on the date and the weather, spend your money wisely to buy the foods you think will be in demand.</li>
+                    <li id="red">Adjust your prices to make as much money as you can.</li>
+                </ul>
+
+                <video controls>
+                    <source src="appdemoOut.mp4" type="video/mp4">
+                    Your browser does not support the <code>video</code> tag.
+                </video>
+
+            </div>            
+        </div> 
+
+        <!--AGRICULTURE-->
+        <div data-role="page" id="agriculture" >
+            <div data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#instructions" data-icon="info">Instructions</a></li>
+                        <li><a href="#agriculture" data-icon ="shopping-cart" class="ui-btn-active ui-state-persist">Agriculture</a></li>
+                        <li><a href="#business" data-icon ="suitcase">Strategy</a></li>
+                        <li><a href="#quiz"  data-icon ="files-o">Quiz Me!</a></li>
+                        <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+                    </ul>
+                </div>
+            </div>  
+            <div data-role="main" class="ui-content" style="margin:10px;">
+                <h2 id="orange">Fruits and Vegetables By Season</h2>
+                <!--      WINTER-->
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>WINTER/FALL</h3>
+                    <p>
+                        <image src='images/winter.png' alt='winter' height='50'/>
+                        In the winter people like to make soups and pies.
+                        Popular ingredients include: <br><br>
+                        APPLES <image src='images/apple.png' height='30'/> 
+                        BANANAS <image src='images/banana.png' height='30'/>  
+                        BROCCOLI <image src='images/broccoli.png' height='30'/>
+                        CARROTS <image src='images/carrot.png' height='30'/>  
+                        ONIONS <image src='images/onion.png' height='30'/>  
+                        ORANGES <image src='images/orange.png' height='30'/>     
+                        POTATOES <image src='images/potato.png' height='30'/>
+                        <br><br>
+                        People might also buy some of the "summer fruits and veggies", but they are usually higher in price, and won't taste as good.
+                    </p>
+                </div>
+                <!--SUMMER-->
+                <div data-role="collapsible">
+                    <h3>SUMMER/SPRING</h3>
+                    <p>            
+                        <image src='images/summer.png' alt='summer' height='50'style='transform: scaleX(-1);'/>
+                        In the summer people prefer refreshing fruit or vegetable salads and shakes.
+                        Popular ingredients include: <br><br>     
+                        CUCUMBERS  <image src='images/cucumber.png' height='30' style='transform: rotate(45deg);'/>  
+                        GRAPES <image src='images/grapes.png' height='30'/>  
+                        MANGO <image src='images/mango.png' height='30'/>  
+                        STRAWBERRIES <image src='images/strawberries.png' height='30'/>  
+                        TOMATOES <image src='images/tomato.png' height='30'/>  
+                        WATERMELON <image src='images/watermelon.png' height='30'/>  
+                        <br><br>
+                        While these are seasonal and usually taste better in the warmer months, the "winter fruits and veges" are usually good all year round. They typically do not go up in price during the summer.
+                    </p>
+
+                </div>    
+                <!--HOLIDAYS-->
+                <div data-role="collapsible">
+                    <h3>SPECIAL HOLIDAYS</h3>
+                    <p>
+                        <image src='images/gingerbread.png' alt='holidays' height='50'/>
+                        In the week or two before holidays, it is important to stock up on popular holiday items. <br>
+                    <ul>
+                        <li>On Thanksgiving(forth Thursday of November) and Christmas(December 25), PUMPKIN <image src='images/pumpkin.png' height='30'/> APPLES <image src='images/apple.png' height='30'/> 
+                            and SWEET POTATOES <image src='images/yam.png' height='30'/> are popular for pies and other special holiday meals.</li>
+                        <li>On Hanukkah(in December), people like to use POTATOES  <image src='images/potato.png' height='30'/> to make potato latkas. </li>
+                        <li>On Easter, people will buy more BERRIES  <image src='images/strawberries.png' height='30'/> and other fruits. </li>
+                        <li>On the Jewish New Year of Rosh Hashanah(in September), APPLES <image src='images/apple.png' height='30'/>  will be high in demand.</li>
+                    </ul>
+                    </p>
+                </div>      
+            </div>
+        </div>
+
+        <!--BUSINESS-->
+        <div data-role="page" id="business">
+            <div data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#instructions" data-icon="info">Instructions</a></li>
+                        <li><a href="#agriculture" data-icon ="shopping-cart">Agriculture</a></li>
+                        <li><a href="#business" data-icon ="suitcase" class="ui-btn-active ui-state-persist">Strategy</a></li>
+                        <li><a href="#quiz"  data-icon ="files-o">Quiz Me!</a></li>
+                        <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>                   
+                    </ul>
+                </div>
+            </div>  
+            <div data-role="main" class="ui-content" style="margin:10px; line-height: 30px;">
+                <h3 id='blue'>Here are some business strategies to help you make the most money:</h3>
+                <ul>
+                    <li>Season:
+                        <ul>
+                            <li>
+                                Provide more of the fruits and vegetables that are in demand at the current time. 
+                            </li>
+                            <li>
+                                Consider the current season as well as upcoming holidays!
+                            </li>
+                            <li>
+                                If something is in demand and also in season, you should consider selling more of it for a lower/competitive price. 
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Prices:
+                        <ul>
+                            <li>
+                                In general, you should be selling your fruits for about x2 the price you bought them for.
+                            </li>
+                            <li>
+                                In the winter, summer fruits will be more expensive because they must be imported from other places. 
+                            </li>
+                            <li>
+                                Do not try to sell too many of a fruit or vegetable at a high price when it is not in demand.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Weather: 
+                        <ul>
+                            <li>
+                                Do not try to sell too much when the weather is very uncomfortably cold or hot. People will be less likely to stop.
+                            </li>
+                            <li>
+                                Remember, people are not likely to stop and buy fruits and vegetables outside during a snowstorm or a thunderstorm!
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>      
+
+        <!--QUIZ-->
+        <div data-role="page" id="quiz">
+            <div data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#instructions" data-icon="info">Instructions</a></li>
+                        <li><a href="#agriculture" data-icon ="shopping-cart">Agriculture</a></li>
+                        <li><a href="#business" data-icon ="suitcase">Strategy</a></li>
+                        <li><a href="#quiz"  data-icon ="files-o" class="ui-btn-active ui-state-persist">Quiz Me!</a></li>
+                        <li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+                    </ul>
+                </div>
+            </div>  
+            <div data-role="main" class="ui-content"  style="margin:10px;">
+                <h2 id="purple">Quiz Me!</h2>
+                <button id="start" onclick="start()">Start</button>
+                <div id = "questionSection">
+                    <form id="form" action="javascript:check()">
+                        <h3 id ="questionNumber"></h3>
+                        <div id="question">Question
+                        </div>
+                        <div id="answers">    
+                        </div>
+                        <div id="buttons">
+                            <input type="submit" value="Choose">
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <div id="result">
+                </div>
+                <img id='goodluck' src="images/luck.png" alt="Good Luck!" width=100%;/>
+            </div>
+        </div>      
+    </body>
+</html>

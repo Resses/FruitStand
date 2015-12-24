@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="jqm-icon-pack-fa.css">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script src="setup.js"></script>
+        <script>$("[type='number']").keypress(function (evt) {
+                evt.preventDefault();
+            });
+        </script>
+        <style>
+            .ui-content{
+                margin:5%;
+            }
+            input{
+                width:50%;
+                height:30px;
+                display:inline;
+            }
+            @media all and (max-width: 350px) {
+                .my-breakpoint .ui-block-a,
+                .my-breakpoint .ui-block-b,
+                .my-breakpoint .ui-block-c,
+                .my-breakpoint .ui-block-d,
+                .my-breakpoint .ui-block-e {
+                    width: 100%;
+                    float: none;
+                }
+            }
+        </style>
+        <title>Set Up</title>    
+    </head>
+    <body onload="javascript:init();">
+        <div data-role="page" id="setup">
+            <div data-role="header" data-position="fixed">
+                <label id="date"></label>
+                <label id="weather"></label>
+                <label id="money"> You have $</label>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form id="stockForm" action="javascript:complete()">
+                    <h3>Set your prices for each item!</h3>
+                    <div class="ui-grid-b my-breakpoint" id="stock">
+                    </div>   
+                    <input type="submit" value="Done">
+                </form>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h1> <a href="index.html" data-role="button" data-icon="home"  data-ajax="false" class="big"></a>
+                    Fruit Stand</h1>
+            </div>  
+        </div>
+    </body>
+</html>

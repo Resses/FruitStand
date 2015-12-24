@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="jqm-icon-pack-fa.css">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>    
+        <script src="buy.js"></script>
+        <style>
+            .select{
+                width:95%;
+                height:40px;
+            }
+            @media all and (max-width: 450px) {
+                .my-breakpoint .ui-block-a,
+                .my-breakpoint .ui-block-b,
+                .my-breakpoint .ui-block-c,
+                .my-breakpoint .ui-block-d,
+                .my-breakpoint .ui-block-e {
+                    width: 100%;
+                    float: none;
+                }
+            }
+        </style>
+        <title>Buy</title>
+    </head>
+    <body onload="init()">
+        <div data-role="page">
+            <div data-role="header" data-position="fixed" data-tap-toggle="false">
+                <label id="date">  [date]  </label>
+                <label id="weather">  [weather]  </label>
+                <label id="money"> You have $ </label>
+                <label id="cost">Total Cost: 0</label>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form id="buyForm" action="javascript:buy()">
+                    <h3>Choose how many of each fruit and vegetable you want to buy, so you can sell them at your stand.</h3>
+                    <div class="ui-grid-b my-breakpoint">
+                        <!--code goes here when init is called-->
+                    </div>     
+                    <div id="button">
+                        <input type="submit" value="Done">
+                    </div>
+                </form>
+                <a id="lnkSetup" href="SetUp.html" data-ajax=false; style='display:none;'></a>
+                <a id='lnkDialog' href="#dialog" data-rel="dialog" data-transition="pop" style='display:none;'></a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1> <a href="index.html" data-role="button" data-ajax="false" data-icon="home" class="big"></a>
+                    Fruit Stand</h1>
+            </div>
+        </div>
+    </body>
+</html>
