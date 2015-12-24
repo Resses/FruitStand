@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>About</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="jqm-icon-pack-fa.css">
+        <link rel ="stylesheet" href="css/quiz.css">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src ="quiz.js"></script>
+        <style>
+            .ui-content{
+                margin:5%;
+            }
+            .head.ui-header.ui-bar-inherit.ui-header-fixed.slidedown{
+                background: transparent;
+            }
+            @media (max-width: 600px) {
+                .logo{
+                    width:100%;
+                    height:auto;
+                }
+            }
+            @media (min-width: 600px) {
+                .head{ 
+                    text-align: center;
+                }
+
+                .logo{
+                    height: 70px;
+                    margin-top: 1%;
+                    margin-bottom: 1%;
+                    border:4px solid black;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" data-position="fixed" class='head'>
+                <img class='logo' src="images/logo2.png" alt="logo"/>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h1>ABOUT</h1>
+                <p>Hi! My name is Renee, and I created FRUIT STAND as a fun way to help
+                    kids learn about when different fruits and vegetables are in season, as well as how to make good business decisions. <br><br>
+                    STEM is an acronym for Science, Technology, Engineering and Math education.
+                    It is very important for kids to be educated in these fields, especially through fun ways like games.
+                </p>  
+                To learn more, visit:
+                <ul>
+                    <li><a href="http://www.cslnet.org/our-agenda/what-is-stem/">STEM at cslnet.org</a></li>
+                    <li><a href="http://www.cuesa.org/eat-seasonally/charts/fruit">Seasonal Fruits at cuesa.org</a></li>
+                </ul>
+                <br>
+                I do not claim the rights to any images or sounds found for free online.
+            </div>
+
+            <div data-role="footer" data-position="fixed" data-fullscreen="true" >
+                <h1> <a href="index.html" data-role="button" data-ajax="false" data-icon="home" class="big"></a>
+                    Fruit Stand</h1>
+            </div>  
+
+        </div>
+    </body>
+</html>

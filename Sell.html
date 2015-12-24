@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sell</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" href="jqm-icon-pack-fa.css">
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+        <script src="jquery.js"></script>
+        <script src="jquery.mobile-1.4.5.js"></script>
+        <script src="sell.js"></script>
+        <style>
+            @media ( min-width: 200px ) {
+                /* Show the table header rows and set all cells to display: table-cell */ 
+                .my-custom-breakpoint td,
+                .my-custom-breakpoint th,
+                .my-custom-breakpoint tbody th,
+                .my-custom-breakpoint tbody td,
+                .my-custom-breakpoint thead td,
+                .my-custom-breakpoint thead th {
+                    display: table-cell;
+                    margin: 0;
+                }
+                /* Hide the labels in each cell */ 
+                .my-custom-breakpoint td .ui-table-cell-label,
+                .my-custom-breakpoint th .ui-table-cell-label { 
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body onload="javascript:init();">
+        <div data-role="page">
+            <div data-role="header">
+                <label id="date"></label>
+                <label id="weather"></label>
+                <label id="money"> You have $ </label>
+            </div>
+            <div data-role="main" class="ui-content">
+                <label id="timer" class='ui-btn' style="border:2px solid green;"></label>
+                <br>
+                <table data-role="table" class="my-custom-breakpoint" id="table1" style="border-bottom:2px solid black;">
+                </table>
+                <br>
+                <div id="results" style="float:left">
+                </div>
+                <div id="tips" style="float:right">
+                    <button id="close" onclick="closeEarly()">
+                        Close Early
+                    </button>
+                    <a id='btnEval' href="#evalPage" class="ui-btn" style='display:none'>See Evaluation</a>
+                    <a id="play" href="Play.html" data-ajax="false" class="ui-btn" style='display:none'>Play Again</a>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1> <a href="index.html" data-role="button" data-ajax="false" data-icon="home" class="big"></a>
+                    Fruit Stand</h1>
+            </div>
+        </div>
+
+        <div data-role="page" data-dialog="true" id="evalPage">
+            <div data-role="header">
+                <h1>Evaluation</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div id='evaluation'></div>
+            </div>
+        </div>
+
+    </body>
+</html>
