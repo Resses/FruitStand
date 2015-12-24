@@ -174,7 +174,7 @@ function getPercentSell() {
                 e.innerHTML+="In season! Higher chance of selling.<br>"
             }
 //            //on average, selling for double the buy price is normal. if its less, chances of selling increase, if its more but the fruits are harder to come by, its okay
-            var priceIncrease = parseFloat(fruits[i].price) / fruits[i].sellingPrice;
+            var priceIncrease =fruits[i].sellingPrice/ parseFloat(fruits[i].price);  
 
             if (currentSeason === "winter") {
                 if (fruits[i].season === "summer") {
